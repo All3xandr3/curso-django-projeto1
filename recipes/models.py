@@ -2,14 +2,14 @@ from django.contrib.auth.models import User
 from django.db import models
 
 
-class Category(models.model):
+class Category(models.Model):
     name = models.CharField(max_length=65)
 
 
-class Recipe(models.model):
+class Recipe(models.Model):
     title = models.CharField(max_length=65)
     description = models.CharField(max_length=165)
-    slug = models.slugfield()
+    slug = models.SlugField()
     preparation_time = models.IntegerField()
     preparation_time_unit = models.CharField(max_length=65)
     servings = models.IntegerField()
